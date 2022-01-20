@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    dynamic:
+      primary: master
+      strict: false
+      datasource:
+        master:
+          url: jdbc:mysql://localhost:3306/panda?useUnicode=true&characterEncoding=utf8&useServerPrepStmts=true&cachePrepStmts=true&prepStmtCacheSqlLimit=51200&callableStmtCacheSize=20000&rewriteBatchedStatements=true
+          username: root
+          password: 123456
+          driver-class-name: com.mysql.jdbc.Driver
+        slave_1:
+          url: jdbc:mysql://localhost:3306/salvepanda?useUnicode=true&characterEncoding=utf8&useServerPrepStmts=true&cachePrepStmts=true&prepStmtCacheSqlLimit=51200&callableStmtCacheSize=20000&rewriteBatchedStatements=true
+          username: user
+          password: 123456
+          driver-class-name: com.mysql.jdbc.Driver
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
