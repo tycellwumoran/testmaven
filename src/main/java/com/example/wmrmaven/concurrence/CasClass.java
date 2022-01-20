@@ -12,10 +12,10 @@ public class CasClass {
     /**
      *
      */
-
     private synchronized void test(){
         System.out.println("121212");
     }
+
 
     public static void main(String[] args) {
         AtomicInteger atmotiInteget = new AtomicInteger();
@@ -25,6 +25,6 @@ public class CasClass {
         for (int i = 0; i < 10000; i++) {
             atmotiInteget.decrementAndGet();
         }
-        System.out.println(atmotiInteget);
+        System.out.println(atmotiInteget.get());
     }
 }
